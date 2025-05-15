@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/woff/FiraCode-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/woff/FiraCode-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/woff/FiraCode-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/woff/FiraCode-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/woff/FiraCode-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #42e123;
+  font-family: 'Fira Code';
+  background-color: #070705;
+}
+
+/* HEADER */
+header{
+    font-size: 20px;
+    font-weight: 700;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+header a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(236, 236, 236);
+    margin: 20px;
+}
+header a:hover, header span:hover{
+    color: #42e123;
+    text-align: center;
+}
+header a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+}
+header a:hover::after, header span:hover::after{
+    width: 100%;
+}
+
+/* HOME */
+#container-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    height: 90vh;
+    z-index: -1;
+}
+#container-home .text-intro{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: justify;
+}
+#container-home .text-intro p span.verde{
+    font-size: 40px;
+    background-color: rgba(96, 233, 63, 0.4);
+    opacity: 0.5;
+    width: fit-content;
+    border-radius: 10px;
+}
+#container-home .text-intro p span.branco{
+    color: rgb(236, 236, 236);
+    text-align: center;
+}
+#container-home .text-intro p.jr{
+    color: rgb(236, 236, 236);
+    text-align: center;
+}
+#container-home .perfil{
+    justify-content: center;
+    display: flex;
+    margin: 30px;
+}
+#container-home .perfil img{
+    width: 200px;
+    border-radius: 50%;
+    height: 200px;
+    object-fit: cover;
+}
+#container-home .redes-sociais{
+    display: grid;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2;
+}
+#container-home .redes-sociais a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(236, 236, 236);
+    font-size: 30px;
+    transition: color 0.5s ease, text-decoration-color 0.5s ease;
+}
+#container-home .redes-sociais a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+}
+#container-home .redes-sociais a:hover{
+    color: #42e123;
+}
+#container-home .redes-sociais a:hover::after {
+  width: 100%;
+}
+
+/* EXPERTISE */
+#container-expertise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#container-expertise .web-des{
+}
+#container-expertise .web-des div{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#container-expertise .web-des div img{
+    width: 50px;
+}
+#container-expertise .soft-des div{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#container-expertise .soft-des div img{
+    width: 50px;
+}
