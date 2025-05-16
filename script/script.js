@@ -37,5 +37,7 @@ const textojr = "Junior Developer";
     }
 }
 
+const simbnome = document.querySelector('.code-simb');
+simbnome.textContent = " </>";
 
   digitarbranco(); // inicia tudo

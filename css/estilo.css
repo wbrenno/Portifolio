@@ -41,7 +41,7 @@
 
 /* HEADER */
 header{
-    background-color: #070705;
+    background-color: #54595f;
     font-size: 20px;
     font-weight: 700;
     align-items: center;
@@ -49,17 +49,41 @@ header{
     justify-content: center;
     height: 10vh;
 }
-header a{
+header .name-header a{
+    text-decoration: none;
+    color: rgb(236, 236, 236);
+}
+header .name-header a.code-simb{
+    font-size: 30px;
+    font-weight: 700;
+}
+header .name-header{
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    color: rgb(236, 236, 236);
+}
+
+header .name-header .code-simb{
+    font-weight: 300;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+header .nav-bar{
+    width: 70%;
+}
+header .nav-bar a{
     position: relative;
     text-decoration: none;
     color: rgb(236, 236, 236);
     margin: 20px;
 }
-header a:hover, header span:hover{
+header .nav-bar a:hover, header .nav-bar span:hover{
     color: #42e123;
     text-align: center;
 }
-header a::after{
+header .nav-bar a::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -69,15 +93,14 @@ header a::after{
     background-color: white;
     transition: width 0.5s ease-in-out;
 }
-header a:hover::after, header span:hover::after{
+header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     width: 100%;
 }
 
 /* HOME */
 #container-home{
-    background-color: #070705;
+    background: linear-gradient(to bottom, #54595f, #070705);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center ;
     height: 90vh;
@@ -90,10 +113,21 @@ header a:hover::after, header span:hover::after{
 }
 #container-home .text-intro p span.verde{
     font-size: 40px;
-    background-color: rgba(96, 233, 63, 0.4);
-    opacity: 0.5;
     width: fit-content;
-    border-radius: 10px;
+    color: rgb(236, 236, 236);
+    position: relative;
+    z-index: 1;
+
+}
+#container-home .text-intro p span.verde::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    background-color: #42e123;
+    width: 100%;
+    height: 10px;
+    z-index: -1;
 }
 #container-home .text-intro p span.branco{
     color: rgb(236, 236, 236);
@@ -101,7 +135,7 @@ header a:hover::after, header span:hover::after{
 }
 #container-home .text-intro p.jr{
     color: rgb(236, 236, 236);
-    text-align: center;
+    text-align: end;
 }
 #container-home .perfil{
     justify-content: center;
@@ -114,96 +148,93 @@ header a:hover::after, header span:hover::after{
     height: 200px;
     object-fit: cover;
 }
-#container-home .redes-sociais{
-    display: grid;
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    z-index: 2;
-}
-#container-home .redes-sociais a{
-    position: relative;
-    text-decoration: none;
-    color: rgb(236, 236, 236);
-    font-size: 30px;
-    transition: color 0.5s ease, text-decoration-color 0.5s ease;
-}
-#container-home .redes-sociais a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: white;
-    transition: width 0.5s ease-in-out;
-}
-#container-home .redes-sociais a:hover{
-    color: #42e123;
-}
-#container-home .redes-sociais a:hover::after {
-  width: 100%;
-}
 
 /* EXPERTISE */
 #container-expertise{
     background-color: #070705;
+    height: 100vh;
+}
+#container-expertise>div{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
+    color: rgb(236, 236, 236);
+}
+#container-expertise .title-expertise{
+    font-weight: 700;
+    font-size: 40px;
+    height: 30vh;
+    color: rgb(236, 236, 236);
+    align-items: end;
+    justify-content: flex-start;
+    display: flex;
+    width: auto;
+    width: fit-content;
+     margin-left: 10%;
 }
 #container-expertise .web-des{
-    width: 33.3%;
+    width: 20%;
+    height: auto;
+    margin: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 3px solid white;
-     background-color: gray;
+    border: 3px solid rgb(236, 236, 236);
+    border-radius: 0 30px 0 0;
+    background-color: #070705;
 }
 #container-expertise .web-des div{
     display: flex;
-    align-items: center; 
-    justify-content: center;
+    padding: 10px;
+    align-items: initial; 
     color: rgb(236, 236, 236);
 }
 #container-expertise .web-des div img{
-    width: 50px;
+    width: 30px;
+    margin-right: 10px;
 }
 #container-expertise .soft-des{
-    width: 33.3%;
+    width: 20%;
+    height: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 3px solid white;
-    background-color: gray;
+    border: 3px solid rgb(236, 236, 236);
+    border-radius: 0 30px 0 0;
+    background-color: #070705;
 }
 #container-expertise .soft-des div{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
+    align-items: initial;
     color: rgb(236, 236, 236);
 }
 #container-expertise .soft-des div img{
-    width: 50px;
+    width: 30px;
+    margin-right: 10px;
 }
 #container-expertise .tecnico-ti{
-    width: 33.3%;
+    width: 20%;
+    height: auto;
+    margin: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 3px solid white;
-    background-color: gray;
+    border: 3px solid rgb(236, 236, 236);
+    border-radius: 0 30px 0 0;
+    background-color: #070705;
 }
 #container-expertise .tecnico-ti div{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
+    align-items: initial;
     color: rgb(236, 236, 236);
 }
 
 #container-expertise .tecnico-ti div img{
-    width: 50px;
+    width: 30px;
+    margin-right: 10px;
 }
 #container-expertise .soft-des div p, #container-expertise .soft-des p, #container-expertise .web-des div p, #container-expertise .web-des p, #container-expertise .tecnico-ti p,
 #container-expertise .tecnico-ti div p{
@@ -212,7 +243,132 @@ header a:hover::after, header span:hover::after{
 }
 #container-expertise .soft-des div p, #container-expertise .web-des div p, #container-expertise .tecnico-ti div p{
     font-size: 20px;
+    position: relative;
+    z-index: 2;
+}
+#container-expertise .soft-des div p::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 100%;
+    background-color: #42e123;
+    opacity: 0.8;
+    height: 10px;
+    z-index: -1;
+}
+#container-expertise .web-des div p::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 100%;
+    background-color: #fa2e59;
+    opacity: 0.8;
+    height: 10px;
+    z-index: -1;
+}
+#container-expertise .tecnico-ti div p::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 100%;
+    background-color: #1e72f3;
+    opacity: 0.8;
+    height: 10px;
+    z-index: -1;
 }
 #container-expertise .soft-des p, #container-expertise .web-des p, #container-expertise .tecnico-ti p{
-    font-size: 10px;
+    font-size: 14px;
+}
+/* CONTATO */
+#contato{
+    background-color: #070705;
+    height: 30vh;
+}
+#contato .redes-sociais{
+    display: flex;
+    z-index: 2;
+    width: fit-content;
+    margin: auto;
+    height: 20vh;
+    align-items: center;
+}
+#contato .redes-sociais a{
+    text-decoration: none;
+    color: rgb(236, 236, 236);
+    font-size: 30px;
+    font-weight: 700;
+    transition: color 0.5s ease, text-decoration-color 0.5s ease;
+    width: fit-content;
+    margin:10px;
+}
+#contato .title-contato{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+#contato .title-contato p{
+    font-size:40px;
+    font-weight: 700;
+    color: rgb(236, 236, 236);
+}
+#contato .redes-sociais a.link, #contato .redes-sociais a.git, #contato .redes-sociais a.insta, #contato .redes-sociais a.email{
+    border: 3px solid;
+}
+#contato .redes-sociais a.link:hover{
+    color: #1e72f3;
+}
+#contato .redes-sociais a.git:hover{
+    color: #42e123;
+}
+#contato .redes-sociais a.insta:hover{
+    color: #fa2e59;
+}
+#contato .redes-sociais a.email:hover{
+    color: #7f135f;
+}
+/* footer */
+footer{
+    background-color: #070705;
+}
+footer .direitos{
+    width: fit-content;
+    margin: auto;
+}
+footer .direitos a.name-foot{
+    transition: color 0.5s ease, text-decoration-color 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+footer .direitos a.name-foot::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    height: 1px;
+    width: 0;
+    background-color: rgb(236, 236, 236);
+    transition:0.5s ease-in-out;
+    z-index: -1;
+}
+footer .direitos a.name-foot:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    transition:0.5s ease-in-out;
+    z-index: -1;
+}
+footer .direitos a, footer .direitos p{
+    text-decoration: none;
+    color: rgb(236, 236, 236);
+    font-size: 15px;
+}
+footer .direitos a.name-foot:hover{
+    color: #42e123;
 }
