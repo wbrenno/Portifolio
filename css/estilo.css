@@ -35,14 +35,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  color: #42e123;
+  box-sizing: border-box;   
   font-family: 'Fira Code';
-  background-color: #070705;
 }
 
 /* HEADER */
 header{
+    background-color: #070705;
     font-size: 20px;
     font-weight: 700;
     align-items: center;
@@ -76,6 +75,7 @@ header a:hover::after, header span:hover::after{
 
 /* HOME */
 #container-home{
+    background-color: #070705;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,26 +147,72 @@ header a:hover::after, header span:hover::after{
 
 /* EXPERTISE */
 #container-expertise{
+    background-color: #070705;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 #container-expertise .web-des{
+    width: 33.3%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+     background-color: gray;
 }
 #container-expertise .web-des div{
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    color: rgb(236, 236, 236);
 }
 #container-expertise .web-des div img{
     width: 50px;
 }
+#container-expertise .soft-des{
+    width: 33.3%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    background-color: gray;
+}
 #container-expertise .soft-des div{
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(236, 236, 236);
 }
 #container-expertise .soft-des div img{
     width: 50px;
+}
+#container-expertise .tecnico-ti{
+    width: 33.3%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    background-color: gray;
+}
+#container-expertise .tecnico-ti div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(236, 236, 236);
+}
+
+#container-expertise .tecnico-ti div img{
+    width: 50px;
+}
+#container-expertise .soft-des div p, #container-expertise .soft-des p, #container-expertise .web-des div p, #container-expertise .web-des p, #container-expertise .tecnico-ti p,
+#container-expertise .tecnico-ti div p{
+    color: rgb(236, 236, 236);
+    font-weight: 700;
+}
+#container-expertise .soft-des div p, #container-expertise .web-des div p, #container-expertise .tecnico-ti div p{
+    font-size: 20px;
+}
+#container-expertise .soft-des p, #container-expertise .web-des p, #container-expertise .tecnico-ti p{
+    font-size: 10px;
 }

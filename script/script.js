@@ -14,7 +14,7 @@ const textojr = "Junior Developer";
     if (x < textoverde.length) {
       verdeEl.innerHTML += textoverde.charAt(x);
       x++;
-      setTimeout(digitarverde, 80);
+      setTimeout(digitarverde, 60);
     }else{
         digitarjr();
     }
@@ -23,7 +23,7 @@ const textojr = "Junior Developer";
     if (y < textojr.length) {
       jrEl.innerHTML += textojr.charAt(y);
       y++;
-      setTimeout(digitarjr, 80);
+      setTimeout(digitarjr, 60);
     }
   }
 
@@ -31,7 +31,7 @@ const textojr = "Junior Developer";
     if (i < textobranco.length) {
       brancoEl.innerHTML += textobranco.charAt(i);
       i++;
-      setTimeout(digitarbranco, 80);
+      setTimeout(digitarbranco, 60);
     } else{
       digitarverde();
     }
