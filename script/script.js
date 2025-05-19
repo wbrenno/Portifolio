@@ -1,3 +1,4 @@
+// FUNCAOOO HOMEM TEXTO APARECENDO-----------------------------------------------------------------------------------------------------
 const textobranco = "Olá, me chamo ";
 const textoverde = "Breno Brum";
 const textojr = "Junior Developer";
@@ -41,3 +42,39 @@ const simbnome = document.querySelector('.code-simb');
 simbnome.textContent = " </>";
 
   digitarbranco(); // inicia tudo
+
+// FUNCAO TROCA DE IMG REDES SOSCIAIS-----------------------------------------------------------------------------------------------------
+
+const links = document.querySelectorAll('.redes-sociais a');
+
+links.forEach(link => {
+  const imgStandard = link.querySelector('.standardjs');
+  const imgHover = link.querySelector('.hoverjs');
+
+  link.addEventListener('mouseenter', () => {
+    imgStandard.style.display = 'none';
+    imgHover.style.display = 'block';
+  });
+
+  link.addEventListener('mouseleave', () => {
+    imgStandard.style.display = 'block';
+    imgHover.style.display = 'none';
+  });
+});
+
+// FUNCAO ADD CLASS .ATIVO-----------------------------------------------------------------------------------------------------
+const toggles = document.querySelectorAll('#experiencia .toggle');
+
+toggles.forEach(toggle => {
+  const conteudo = toggle.querySelector('.conteudo');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('ativo'); // ativa/desativa a classe
+    
+    if (conteudo.style.display === 'none' || conteudo.style.display === '') {
+      conteudo.style.display = 'block';
+    } else {
+      conteudo.style.display = 'none';
+    }
+  });
+});

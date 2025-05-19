@@ -41,7 +41,8 @@
 
 /* HEADER */
 header{
-    background-color: #54595f;
+    background-color: #515151;
+    backdrop-filter: blur(10px);
     font-size: 20px;
     font-weight: 700;
     align-items: center;
@@ -51,7 +52,7 @@ header{
 }
 header .name-header a{
     text-decoration: none;
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
 }
 header .name-header a.code-simb{
     font-size: 30px;
@@ -60,8 +61,8 @@ header .name-header a.code-simb{
 header .name-header{
     display: flex;
     width: 30%;
-    justify-content: center;
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
+    font-size: 30px;s
 }
 
 header .name-header .code-simb{
@@ -76,8 +77,11 @@ header .nav-bar{
 header .nav-bar a{
     position: relative;
     text-decoration: none;
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
     margin: 20px;
+}
+header .name-header .simbolo{
+  margin-left: 10%;
 }
 header .nav-bar a:hover, header .nav-bar span:hover{
     color: #42e123;
@@ -99,7 +103,8 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 
 /* HOME */
 #container-home{
-    background: linear-gradient(to bottom, #54595f, #070705);
+    background:#515151;
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center ;
@@ -114,7 +119,7 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 #container-home .text-intro p span.verde{
     font-size: 40px;
     width: fit-content;
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
     position: relative;
     z-index: 1;
 
@@ -130,11 +135,11 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     z-index: -1;
 }
 #container-home .text-intro p span.branco{
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
     text-align: center;
 }
 #container-home .text-intro p.jr{
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
     text-align: end;
 }
 #container-home .perfil{
@@ -145,13 +150,14 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 #container-home .perfil img{
     width: 200px;
     border-radius: 50%;
+    border: 1px solid #ECECEC;
     height: 200px;
     object-fit: cover;
 }
 
 /* EXPERTISE */
 #container-expertise{
-    background-color: #070705;
+    background: linear-gradient(to bottom, #515151, #070705);
     height: 100vh;
 }
 #container-expertise>div{
@@ -159,13 +165,13 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     justify-content: center;
     align-items: center;
     height: 70vh;
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
 }
 #container-expertise .title-expertise{
     font-weight: 700;
     font-size: 40px;
     height: 30vh;
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
     align-items: end;
     justify-content: flex-start;
     display: flex;
@@ -176,111 +182,203 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 #container-expertise .web-des{
     width: 20%;
     height: auto;
-    margin: auto;
+    margin: auto 0px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 3px solid rgb(236, 236, 236);
-    border-radius: 0 30px 0 0;
-    background-color: #070705;
+    border: 3px solid #515151;
+    border-right: 0px;
+    padding: 10px;
 }
 #container-expertise .web-des div{
     display: flex;
     padding: 10px;
-    align-items: initial; 
-    color: rgb(236, 236, 236);
+    justify-content: center;
 }
 #container-expertise .web-des div img{
-    width: 30px;
+    width: 45px;
     margin-right: 10px;
 }
 #container-expertise .soft-des{
     width: 20%;
     height: auto;
+    margin: auto 0px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 3px solid rgb(236, 236, 236);
-    border-radius: 0 30px 0 0;
-    background-color: #070705;
+    border: 3px solid #515151;
+    padding: 10px;
 }
 #container-expertise .soft-des div{
     display: flex;
     padding: 10px;
-    align-items: initial;
-    color: rgb(236, 236, 236);
+    justify-content: center;
 }
 #container-expertise .soft-des div img{
-    width: 30px;
+    width: 45px;
     margin-right: 10px;
 }
 #container-expertise .tecnico-ti{
     width: 20%;
     height: auto;
-    margin: auto;
+    margin: auto 0px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 3px solid rgb(236, 236, 236);
-    border-radius: 0 30px 0 0;
-    background-color: #070705;
+    border: 3px solid #515151;
+    border-left: 0px;
+    padding: 10px;
 }
 #container-expertise .tecnico-ti div{
     display: flex;
     padding: 10px;
-    align-items: initial;
-    color: rgb(236, 236, 236);
+    justify-content: center;
 }
 
 #container-expertise .tecnico-ti div img{
-    width: 30px;
+    width: 45px;
     margin-right: 10px;
 }
 #container-expertise .soft-des div p, #container-expertise .soft-des p, #container-expertise .web-des div p, #container-expertise .web-des p, #container-expertise .tecnico-ti p,
 #container-expertise .tecnico-ti div p{
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
     font-weight: 700;
 }
 #container-expertise .soft-des div p, #container-expertise .web-des div p, #container-expertise .tecnico-ti div p{
     font-size: 20px;
     position: relative;
+    align-content: center;
     z-index: 2;
 }
 #container-expertise .soft-des div p::after{
     content: "";
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    left: 0;
+    bottom: 15px;
     width: 100%;
     background-color: #42e123;
     opacity: 0.8;
-    height: 10px;
+    height: 7px;
     z-index: -1;
 }
 #container-expertise .web-des div p::after{
     content: "";
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    left: 0;
+    bottom: 15px;
     width: 100%;
     background-color: #fa2e59;
     opacity: 0.8;
-    height: 10px;
+    height: 7px;
     z-index: -1;
 }
 #container-expertise .tecnico-ti div p::after{
     content: "";
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    left: 0;
+    bottom: 15px;
     width: 100%;
     background-color: #1e72f3;
     opacity: 0.8;
-    height: 10px;
+    height: 7px;
     z-index: -1;
 }
 #container-expertise .soft-des p, #container-expertise .web-des p, #container-expertise .tecnico-ti p{
     font-size: 14px;
+}
+/* EXPERIENCIA */
+#experiencia{
+    height: 100vh;
+    color: #ECECEC;
+    background-color: #070705;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#experiencia .title-experiencia{
+    height: 30vh;
+  justify-content: center;
+  display: flex;
+  align-items: end;
+}
+#experiencia .title-experiencia h3{
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+}
+#experiencia .toggle-container{
+    height: 70vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#experiencia .toggle{
+    width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  border-radius: 5px;
+  height: 50px;
+  align-items: center;
+  background-color: #404040;
+  margin: 5px auto;
+  color: color: #070705;;
+}
+#experiencia .toggle:hover{
+    background-color: #42e123;
+    cursor: pointer;
+}
+#experiencia .toggle div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#experiencia .toggle .toggle-img {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    display: inline-block;
+}
+#experiencia .toggle .toggle-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity 0.3s ease; /* transição na opacidade */
+    opacity: 1; /* visível por padrão */
+    position: relative;
+    z-index: 2; /* fica acima */
+}
+
+/* Ícone no ::before */
+#experiencia .toggle .toggle-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../img/mais.svg');
+    opacity: 0; /* invisível por padrão */
+    transition: opacity 0.3s ease; /* transição suave */
+    z-index: 1; /* fica atrás da imagem */
+}
+
+/* Quando estiver ativo: */
+#experiencia .toggle.ativo .toggle-img img {
+    opacity: 0; /* some a imagem original */
+}
+
+#experiencia .toggle.ativo .toggle-img::before {
+    opacity: 1; /* aparece o ::before */
+}
+#experiencia .toggle p{
+    font-size: 13px;
+    padding: 20px
 }
 /* CONTATO */
 #contato{
@@ -289,20 +387,16 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 }
 #contato .redes-sociais{
     display: flex;
-    z-index: 2;
-    width: fit-content;
-    margin: auto;
-    height: 20vh;
-    align-items: center;
+    justify-content: center;
 }
-#contato .redes-sociais a{
-    text-decoration: none;
-    color: rgb(236, 236, 236);
-    font-size: 30px;
-    font-weight: 700;
-    transition: color 0.5s ease, text-decoration-color 0.5s ease;
-    width: fit-content;
-    margin:10px;
+#contato .redes-sociais img{
+    width: 50px;
+    width: 50px;
+    margin: 20px;
+}
+#contato .redes-sociais img:hover{
+    width: 50px;
+    margin: 20px;
 }
 #contato .title-contato{
     display: flex;
@@ -312,22 +406,7 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 #contato .title-contato p{
     font-size:40px;
     font-weight: 700;
-    color: rgb(236, 236, 236);
-}
-#contato .redes-sociais a.link, #contato .redes-sociais a.git, #contato .redes-sociais a.insta, #contato .redes-sociais a.email{
-    border: 3px solid;
-}
-#contato .redes-sociais a.link:hover{
-    color: #1e72f3;
-}
-#contato .redes-sociais a.git:hover{
-    color: #42e123;
-}
-#contato .redes-sociais a.insta:hover{
-    color: #fa2e59;
-}
-#contato .redes-sociais a.email:hover{
-    color: #7f135f;
+    color: #ECECEC;
 }
 /* footer */
 footer{
@@ -349,7 +428,7 @@ footer .direitos a.name-foot::after{
     bottom: 3px;
     height: 1px;
     width: 0;
-    background-color: rgb(236, 236, 236);
+    background-color: #ECECEC;
     transition:0.5s ease-in-out;
     z-index: -1;
 }
@@ -360,13 +439,13 @@ footer .direitos a.name-foot:hover::after{
     bottom: 3px;
     height: 1px;
     width: 100%;
-    background-color: rgb(236, 236, 236);
+    background-color: #ECECEC;
     transition:0.5s ease-in-out;
     z-index: -1;
 }
 footer .direitos a, footer .direitos p{
     text-decoration: none;
-    color: rgb(236, 236, 236);
+    color: #ECECEC;
     font-size: 15px;
 }
 footer .direitos a.name-foot:hover{
