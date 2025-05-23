@@ -71,7 +71,7 @@ header .name-header{
     display: flex;
     width: 30%;
     color: #ECECEC;
-    font-size: 30px;s
+    font-size: 30px;
 }
 
 header .name-header .code-simb{
@@ -331,7 +331,7 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
   align-items: center;
   background-color: #404040;
   margin: 5px auto;
-  color: color: #070705;;
+  color: #070705;
 }
 #experiencia .toggle.ativo{
     margin-bottom: 0px;
