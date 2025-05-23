@@ -64,17 +64,47 @@ links.forEach(link => {
 
 // FUNCAO ADD CLASS .ATIVO-----------------------------------------------------------------------------------------------------
 const toggles = document.querySelectorAll('#experiencia .toggle');
+const conteudos = document.querySelectorAll('#experiencia .toggleconteudo');
 
-toggles.forEach(toggle => {
-  const conteudo = toggle.querySelector('.conteudo');
-
+toggles.forEach((toggle, index) => {
   toggle.addEventListener('click', () => {
-    toggle.classList.toggle('ativo'); // ativa/desativa a classe
-    
-    if (conteudo.style.display === 'none' || conteudo.style.display === '') {
-      conteudo.style.display = 'block';
-    } else {
-      conteudo.style.display = 'none';
+
+    const conteudo = conteudos[index];
+    const isActive = conteudo.classList.contains('ativo');
+
+    // Fecha todos os conteúdos
+    conteudos.forEach(c => c.classList.remove('ativo'));
+
+    // Remove classe ativo de todos os toggles
+    toggles.forEach(t => t.classList.remove('ativo'));
+
+    if (!isActive) {
+      // Abre apenas o clicado
+      conteudo.classList.add('ativo');
+      toggle.classList.add('ativo');
     }
+    // Se estava aberto, ele fecha automaticamente pois remove a classe
   });
 });
+
+// SCROLL ANIMATION
+
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach(reveal => {
+    const revealTop = reveal.getBoundingClientRect().top;
+    
+    // Quando a seção estiver a 150px do final da viewport, ativa.
+    if (revealTop < windowHeight - 150) {
+      reveal.classList.add('active');
+    } else {
+      reveal.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll); // já ativa se alguma estiver visível
