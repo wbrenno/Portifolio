@@ -45,6 +45,7 @@ body{
     min-height: 100vh;
   background: #070705;
   background-attachment: fixed; /* fixa o gradiente */
+  overflow-x: hidden;
 
 }
 
@@ -64,14 +65,15 @@ header .name-header a{
     color: #ECECEC;
 }
 header .name-header a.code-simb{
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 5px;
 }
 header .name-header{
     display: flex;
     width: 30%;
     color: #ECECEC;
-    font-size: 30px;
+    font-size: 23px;
 }
 
 header .name-header .code-simb{
@@ -81,7 +83,7 @@ header .name-header .code-simb{
     align-items: center;
 }
 header .nav-bar{
-    width: 70%;
+    width: 50%;
 }
 header .nav-bar a{
     position: relative;
@@ -91,6 +93,8 @@ header .nav-bar a{
 }
 header .name-header .simbolo{
   margin-left: 10%;
+  display: flex;
+  align-items: center;
 }
 header .nav-bar a:hover, header .nav-bar span:hover{
     color: #42e123;
@@ -109,6 +113,43 @@ header .nav-bar a::after{
 header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     width: 100%;
 }
+header .curriculoDonwload{
+    display: flex;
+    width: 20%;
+}
+header .curriculoDonwload img{
+    width: 30px;
+}
+header .curriculoDonwload a{
+    display: flex;
+    color: #ECECEC;
+    text-decoration: none;
+    position: relative;
+}
+header .curriculoDonwload a p{
+    font-size: 17px;
+    margin-left: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+header .curriculoDonwload a p::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 40;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+}
+header .curriculoDonwload a p:hover{
+    color: #42e123;
+}
+header .curriculoDonwload a p:hover::after{
+    width: 70%;
+}
+
 
 /* HOME */
 #container-home{
@@ -121,12 +162,12 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     z-index: -1;
 }
 #container-home .text-intro{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 30px;
     text-align: justify;
 }
 #container-home .text-intro p span.verde{
-    font-size: 40px;
+    font-size: 30px;
     width: fit-content;
     color: #ECECEC;
     position: relative;
@@ -136,11 +177,11 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 #container-home .text-intro p span.verde::after{
     content: "";
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    left: 0px;
+    bottom: 6px;
     background-color: #42e123;
     width: 100%;
-    height: 10px;
+    height: 7px;
     z-index: -1;
 }
 #container-home .text-intro p span.branco{
@@ -177,8 +218,8 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     color: #ECECEC;
 }
 #container-expertise .title-expertise{
-    font-weight: 700;
-    font-size: 40px;
+    font-weight: 500;
+    font-size: 60px;
     height: 30vh;
     color: #ECECEC;
     align-items: end;
@@ -294,6 +335,8 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 }
 #container-expertise .soft-des p, #container-expertise .web-des p, #container-expertise .tecnico-ti p{
     font-size: 14px;
+    text-align: justify;
+    padding: 14px;
 }
 /* EXPERIENCIA */
 #experiencia{
@@ -311,8 +354,8 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
   align-items: center;
 }
 #experiencia .title-experiencia h3{
-    font-weight: 700;
-    font-size: 40px;
+    font-weight: 500;
+    font-size: 60px;
     text-align: center;
 }
 #experiencia .toggle-container{
@@ -329,16 +372,15 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
   border-radius: 5px;
   height: 50px;
   align-items: center;
-  background-color: #404040;
+  background-color: #ECECEC;
   margin: 5px auto;
-  color: #070705;
+  color: #000000;
 }
 #experiencia .toggle.ativo{
     margin-bottom: 0px;
     border-radius: 5px;
 }
 #experiencia .toggle:hover{
-    background-color: #42e123;
     cursor: pointer;
 }
 #experiencia .toggle div{
@@ -357,7 +399,7 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     width: 100%;
     height: 100%;
     display: block;
-    transition: opacity 0.3s ease; /* transição na opacidade */
+    transition: opacity 1s ease; /* transição na opacidade */
     opacity: 1; /* visível por padrão */
     position: relative;
     z-index: 2; /* fica acima */
@@ -374,9 +416,9 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url('../img/mais.svg');
+    background-image: url('../img/ma.svg');
     opacity: 0; /* invisível por padrão */
-    transition: opacity 0.3s ease; /* transição suave */
+    transition: opacity 1s ease; /* transição suave */
     z-index: 1; /* fica atrás da imagem */
 }
 #experiencia .toggle-container .toggleconteudo {
@@ -384,9 +426,7 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     justify-content: center;
     width: 30%;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #404040;
+    background-color: #ECECEC;
     height: fit-content;
     border-radius: 5px;
     overflow: hidden;
@@ -398,18 +438,37 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 }
 
 #experiencia .toggle-container .toggleconteudo.ativo {
-    max-height: 500px; /* ou ajuste conforme o conteúdo */
+    max-height: 500px;
     opacity: 1;
     transform: translateY(0);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#experiencia .toggle-container .toggleconteudo.ativo p, #experiencia .toggle-container .toggleconteudo.ativo a{
+    color: #000;
+    font-weight: 500;
+}
+#experiencia .toggle-container .toggleconteudo.ativo ul{
+    list-style: none;
+    padding: 10px 24px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;   
+}
+#experiencia .toggle-container .toggleconteudo.ativo ul li>span{
+    background-color: #42e123;
+    padding: 2px 9px;
+    border-radius: 10px;
+    margin: 3px;
 }
 #experiencia .toggle-container .toggleconteudo>div{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 24px;
 }
 #experiencia .toggle-container .toggleconteudo .localizacaoExp, #experiencia .toggle-container .toggleconteudo .linkExp{
     display: flex;
-    color: #ECECEC;
     font-size: 16px;
     justify-content: center;
     align-items: center;
@@ -417,7 +476,9 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 }
 #experiencia .toggle-container .toggleconteudo .linkExp a{
     text-decoration: none;
-    color: #ECECEC;
+}
+#experiencia .toggle-container .toggleconteudo .linkExp a:hover{
+    color: #42e123;
 }
 #experiencia .toggle-container .toggleconteudo .localizacaoExp img, #experiencia .toggle-container .toggleconteudo .linkExp img{
     width: 20px;
@@ -447,12 +508,12 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
 }
 #contato .redes-sociais img{
     width: 50px;
-    width: 50px;
     margin: 20px;
 }
 #contato .redes-sociais img:hover{
-    width: 50px;
+    width: 55px;
     margin: 20px;
+    transition:0.3s ease-in-out;
 }
 #contato .title-contato{
     display: flex;
@@ -460,8 +521,8 @@ header .nav-bar a:hover::after, header .nav-bar span:hover::after{
     height: 10vh;
 }
 #contato .title-contato p{
-    font-size:40px;
-    font-weight: 700;
+    font-size:60px;
+    font-weight: 500;
     color: #ECECEC;
 }
 /* footer */

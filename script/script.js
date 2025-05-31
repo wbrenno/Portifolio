@@ -98,7 +98,7 @@ function revealOnScroll() {
     const revealTop = reveal.getBoundingClientRect().top;
     
     // Quando a seção estiver a 150px do final da viewport, ativa.
-    if (revealTop < windowHeight - 150) {
+    if (revealTop < windowHeight - 200) {
       reveal.classList.add('active');
     } else {
       reveal.classList.remove('active');
