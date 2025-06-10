@@ -1,7 +1,7 @@
 // FUNCAOOO HOMEM TEXTO APARECENDO-----------------------------------------------------------------------------------------------------
-const textobranco = "Olá, me chamo ";
+const textobranco = "Olá, me nome e ";
 const textoverde = "Breno Brum";
-const textojr = "Junior Developer";
+const textojr = "Junior Developer | Full Stack";
 
   const brancoEl = document.querySelector('.branco');
   const verdeEl = document.querySelector('.verde');
@@ -42,25 +42,13 @@ const simbnome = document.querySelector('.code-simb');
 simbnome.textContent = " </>";
 
   digitarbranco(); // inicia tudo
-
-// FUNCAO TROCA DE IMG REDES SOSCIAIS-----------------------------------------------------------------------------------------------------
-
-const links = document.querySelectorAll('.redes-sociais a');
-
-links.forEach(link => {
-  const imgStandard = link.querySelector('.standardjs');
-  const imgHover = link.querySelector('.hoverjs');
-
-  link.addEventListener('mouseenter', () => {
-    imgStandard.style.display = 'none';
-    imgHover.style.display = 'block';
-  });
-
-  link.addEventListener('mouseleave', () => {
-    imgStandard.style.display = 'block';
-    imgHover.style.display = 'none';
-  });
-});
+//SCROLL SETA PARA BAIXOOO
+  function scrollToSection(id) {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 // FUNCAO ADD CLASS .ATIVO-----------------------------------------------------------------------------------------------------
 const toggles = document.querySelectorAll('#experiencia .toggle');
@@ -98,7 +86,7 @@ function revealOnScroll() {
     const revealTop = reveal.getBoundingClientRect().top;
     
     // Quando a seção estiver a 150px do final da viewport, ativa.
-    if (revealTop < windowHeight - 200) {
+    if (revealTop < windowHeight - 1) {
       reveal.classList.add('active');
     } else {
       reveal.classList.remove('active');
@@ -107,4 +95,4 @@ function revealOnScroll() {
 }
 
 window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll); // já ativa se alguma estiver visível
+window.addEventListener('load', revealOnScroll); 
