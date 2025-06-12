@@ -43,12 +43,18 @@ simbnome.textContent = " </>";
 
   digitarbranco(); // inicia tudo
 //SCROLL SETA PARA BAIXOOO
-  function scrollToSection(id) {
-    const section = document.querySelector(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+
+document.querySelector('.scroll-down').addEventListener('click', () => {
+  const elemento = document.getElementById('container-expertise');
+  const offset = 200; // distância em px antes do topo do elemento que você quer parar
+  const elementPosition = elemento.getBoundingClientRect().top + window.pageYOffset;
+  const scrollToPosition = elementPosition - offset;
+
+  window.scrollTo({
+    top: scrollToPosition,
+    behavior: 'smooth'
+  });
+});
 
 // FUNCAO ADD CLASS .ATIVO-----------------------------------------------------------------------------------------------------
 const toggles = document.querySelectorAll('#experiencia .toggle');
@@ -86,7 +92,7 @@ function revealOnScroll() {
     const revealTop = reveal.getBoundingClientRect().top;
     
     // Quando a seção estiver a 150px do final da viewport, ativa.
-    if (revealTop < windowHeight - 1) {
+    if (revealTop < windowHeight - 150) {
       reveal.classList.add('active');
     } else {
       reveal.classList.remove('active');
