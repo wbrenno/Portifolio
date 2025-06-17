@@ -707,9 +707,20 @@ header .name-header .simbolo{
     right: 10px;
     bottom: 10px;
 }
+#container-expertise .soft-des div p, #container-expertise .web-des div p, #container-expertise .tecnico-ti div p{
+    font-size: 15px;
+}
+#container-expertise .web-des div img, #container-expertise .soft-des div img, #container-expertise .tecnico-ti div img{
+    width: 30px;
+    margin: 5px;
+}
 }
 /* Celulares médios e grandes */
 @media (min-width: 500px) and (max-width: 768px) {
+#container-expertise .web-des div img, #container-expertise .soft-des div img, #container-expertise .tecnico-ti div img{
+    width: 35px;
+    margin: 10px;
+}
 #experiencia .toggle p{
     font-size: 14px;
     padding: 20px;
@@ -763,6 +774,9 @@ header{
 }
 #container-home{
     min-height: 75vh;
+}
+#container-expertise .soft-des div p, #container-expertise .web-des div p, #container-expertise .tecnico-ti div p{
+    font-size: 15px;
 }
 #container-home .text-intro, #container-home .text-intro p span.verde{
     font-size: 20px;
