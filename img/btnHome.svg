@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo (quadrado) preenchido com azul escuro -->
+  <circle cx="16" cy="16" r="15">
+
+  <!-- Triângulo -->
+  <path d="M5 25L16.0526 8L26 25" stroke="#F1EFEC" fill="none"></path>
+</svg>

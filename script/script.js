@@ -1,7 +1,7 @@
 // FUNCAOOO HOMEM TEXTO APARECENDO-----------------------------------------------------------------------------------------------------
-const textobranco = "Olá, me nome e ";
+const textobranco = "Olá, meu nome é ";
 const textoverde = "Breno Brum";
-const textojr = "Junior Developer | Full Stack";
+const textojr = "Desenvolvedor Júnior| Full Stack";
 
   const brancoEl = document.querySelector('.branco');
   const verdeEl = document.querySelector('.verde');
@@ -46,7 +46,7 @@ simbnome.textContent = " </>";
 
 document.querySelector('.scroll-down').addEventListener('click', () => {
   const elemento = document.getElementById('container-expertise');
-  const offset = 0; // distância em px antes do topo do elemento que você quer parar
+  const offset = 200; // distância em px antes do topo do elemento que você quer parar
   const elementPosition = elemento.getBoundingClientRect().top + window.pageYOffset;
   const scrollToPosition = elementPosition - offset;
 
@@ -102,3 +102,22 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll); 
+
+//BTN HOME APARECER
+
+const alvo = document.querySelector("#container-expertise");
+const btnSubida = document.querySelector(".btndivisubida");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            btnSubida.classList.add("mostrar");
+        } else {
+            btnSubida.classList.remove("mostrar");
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+observer.observe(alvo);

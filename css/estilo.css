@@ -341,7 +341,7 @@ header .curriculoDonwload a p:hover::after{
 }
 #container-expertise .soft-des p, #container-expertise .web-des p, #container-expertise .tecnico-ti p{
     font-size: 14px;
-    text-align: justify;
+    text-align: start;
     padding: 14px;
 }
 /* EXPERIENCIA */
@@ -576,6 +576,21 @@ footer .direitos a, footer .direitos p{
 footer .direitos a.name-foot:hover{
     color: #1F3555;
 }
+.btndivisubida.mostrar {
+    opacity: 1;
+}
+.btndivisubida{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+}
+.btndivisubida .btnSubida img{
+    width: 50px;
+    height: 50px;
+}
 
 .reveal {
   opacity: 0;
@@ -677,16 +692,45 @@ header .name-header .simbolo{
     width: 23px;
 }
 #container-expertise .soft-des p, #container-expertise .web-des p, #container-expertise .tecnico-ti p{
-    font-size: 14px;
+    font-size: 10px;
     text-align: justify;
-    padding: 5px;
+    padding: 0px;
 }
 #contato .redes-sociais img{
     width: 40px;
 }
+.btndivisubida .btnSubida img{
+    width: 25px;
+    height: 25px;
+}
+.btndivisubida{
+    right: 10px;
+    bottom: 10px;
+}
 }
 /* Celulares médios e grandes */
 @media (min-width: 500px) and (max-width: 768px) {
+#experiencia .toggle p{
+    font-size: 14px;
+    padding: 20px;
+}
+#experiencia .toggle h3{
+    font-size: 14px;
+}
+#experiencia .toggle-container .toggleconteudo.ativo p, #experiencia .toggle-container .toggleconteudo.ativo a{
+    font-size: 14px;
+}
+#experiencia .toggle-container .toggleconteudo.ativo ul li > span{
+    background-color: #1F3555;
+    padding: 2px 9px;
+    border-radius: 10px;
+    margin:0;
+    color: #F1EFEC;
+    font-size: 14px;
+}
+#experiencia .toggle{
+    height: 40px;
+}
 header .name-header{
     display: flex;
     justify-content: start;
@@ -747,6 +791,19 @@ header{
 }
 #experiencia .toggle-container .toggleconteudo{
     width: 80%;
+}
+#container-expertise .soft-des p, #container-expertise .web-des p, #container-expertise .tecnico-ti p{
+    font-size: 12px;
+    text-align: start;
+    padding: 5px;
+}
+.btndivisubida{
+    right: 20px;
+    bottom: 20px;
+}
+.btndivisubida .btnSubida img{
+    width: 40px;
+    height: 40px;
 }
 }
 
