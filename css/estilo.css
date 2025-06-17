@@ -108,7 +108,7 @@ header .nav-bar a::after{
     left: 0;
     height: 2px;
     width: 0;
-    background-color: #000000;
+    background-color: #1F3555;
     transition: width 0.5s ease-in-out;
 }
 header .nav-bar a:hover::after, header .nav-bar span:hover::after{
@@ -142,7 +142,7 @@ header .curriculoDonwload a p::after{
     left: 40;
     height: 2px;
     width: 0;
-    background-color: #000000;
+    background-color: #1F3555;
     transition: width 0.5s ease-in-out;
 }
 header .curriculoDonwload a p:hover::after{
@@ -574,7 +574,7 @@ footer .direitos a, footer .direitos p{
     font-size: 15px;
 }
 footer .direitos a.name-foot:hover{
-    color: #000000;
+    color: #1F3555;
 }
 
 .reveal {
@@ -587,9 +587,106 @@ footer .direitos a.name-foot:hover{
   opacity: 1;
   transform: translateY(0);
 }
-
+@media (max-width: 499px){
+#experiencia .toggle p{
+    font-size: 10px;
+    padding: 20px;
+}
+#experiencia .toggle h3{
+    font-size: 13px;
+}
+#experiencia .toggle-container .toggleconteudo.ativo p, #experiencia .toggle-container .toggleconteudo.ativo a{
+    font-size: 10px;
+}
+#experiencia .toggle-container .toggleconteudo.ativo ul li > span{
+    background-color: #1F3555;
+    padding: 2px 9px;
+    border-radius: 10px;
+    margin:0;
+    color: #F1EFEC;
+    font-size: 10px;
+}
+#experiencia .toggle{
+    height: 40px;
+}
+header .name-header{
+display: flex;
+justify-content: start;
+width: 50%;
+color: #1F3555;
+font-size: 23px;
+}
+header .nav-bar, header .curriculoDonwload{
+    display: none;
+}
+header .hamburguer{
+    width: 50%;
+    font-size: 18px;
+    justify-content: end;
+    display: flex;
+    color: #1F3555;
+    margin-right:5%;
+}
+header .hamburguer p{
+    padding-right: 10px;
+}
+header .hamburguer img{
+    width: 20px;
+}
+header .hamburguer .menuhamburguer{
+    display: none;
+}
+header{
+    font-size: 15px;
+}
+#container-home{
+    min-height: 75vh;
+}
+#container-home .text-intro, #container-home .text-intro p span.verde{
+    font-size: 20px;
+}
+#container-expertise .title-expertise, #experiencia .title-experiencia h3, #contato .title-contato p{
+    font-size: 30px;
+    padding: 50px;
+}
+#container-expertise > div{
+    display: block;
+}
+#container-expertise .web-des, #container-expertise .soft-des, #container-expertise .tecnico-ti{
+    text-align: center;
+    min-height: auto;
+    padding: 10px;
+    width: 80%;
+    border: 3px solid;
+    margin: auto;
+}
+#container-expertise .soft-des{
+    border-top: 0;
+    border-bottom: 0;
+}
+#experiencia .toggle{
+    width: 80%;
+}
+#experiencia .toggle-container .toggleconteudo{
+    width: 80%;
+}
+header .name-header .simbolo{
+    font-size: 18px;
+}
+#container-home .scroll-down img{
+    width: 23px;
+}
+#container-expertise .soft-des p, #container-expertise .web-des p, #container-expertise .tecnico-ti p{
+    font-size: 14px;
+    text-align: justify;
+    padding: 5px;
+}
+#contato .redes-sociais img{
+    width: 40px;
+}
+}
 /* Celulares médios e grandes */
-@media (min-width: 300px) and (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 768px) {
 header .name-header{
     display: flex;
     justify-content: start;
@@ -628,6 +725,7 @@ header{
 }
 #container-expertise .title-expertise, #experiencia .title-experiencia h3, #contato .title-contato p{
     font-size: 30px;
+    padding-bottom: 50px;
 }
 #container-expertise > div{
     display: block;
@@ -636,7 +734,7 @@ header{
     text-align: center;
     min-height: auto;
     padding: 10px;
-    width: 100%;
+    width: 80%;
     border: 3px solid;
     margin: auto;
 }
@@ -692,6 +790,7 @@ header{
 }
 #container-expertise .title-expertise, #experiencia .title-experiencia h3, #contato .title-contato p{
     font-size: 40px;
+    padding-bottom: 50px;
 }
 #container-expertise > div{
     display: block;
@@ -732,6 +831,7 @@ header{
 }
 #container-expertise .title-expertise, #experiencia .title-experiencia h3, #contato .title-contato p{
     font-size: 40px;
+    padding-bottom: 50px;
 }
 #container-expertise > div{
     display: block;
@@ -740,7 +840,7 @@ header{
     text-align: center;
     min-height: auto;
     padding: 10px;
-    width: 50%;
+    width: 80%;
     border: 3px solid;
     margin: auto;
 }

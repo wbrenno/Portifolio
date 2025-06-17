@@ -46,7 +46,7 @@ simbnome.textContent = " </>";
 
 document.querySelector('.scroll-down').addEventListener('click', () => {
   const elemento = document.getElementById('container-expertise');
-  const offset = 200; // distância em px antes do topo do elemento que você quer parar
+  const offset = 0; // distância em px antes do topo do elemento que você quer parar
   const elementPosition = elemento.getBoundingClientRect().top + window.pageYOffset;
   const scrollToPosition = elementPosition - offset;
 
